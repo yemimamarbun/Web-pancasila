@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancasila Kini | Revitalisasi Jiwa Kebangsaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #b22e2e;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero button {
+            background-color: #fc3a3a;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .hero button:hover {
+            background-color: #c50000;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #e60000;
+        }
+
+        /* Problem Section */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #e60000;
+            margin-top: 0;
+        }
+
+        /* Solution Section */
+        .solution {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem auto;
+        }
+
+        .solution-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .solution-item {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #e60000;
+        }
+
+        .solution-item h3 {
+            margin-top: 0;
+        }
+
+        /* Quiz Section */
+        .quiz {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        #quiz-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        /* Forum Section */
+        .forum {
+            background-color: #fff;
+        }
+
+        .comment-box {
+            margin-bottom: 2rem;
+        }
+
+        .comment-box textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            min-height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .comment-box button {
+            background-color: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .comment-box button:hover {
+            background-color: #c50000;
+        }
+
+        .comments {
+            margin-top: 2rem;
+        }
+
+        .comment {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            border-left: 3px solid #e60000;
+        }
+
+        .comment strong {
+            color: #e60000;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero {
+                padding: 3rem 1rem;
+                min-height: 50vh;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+            
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav>
+            <h1>Pancasila Kini</h1>
+        </div>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#problem">Permasalahan</a></li>
+            <li><a href="#solution">Solusi</a></li>
+            <li><a href="#quiz">Kuis</a></li>
+            <li><a href="#forum">Forum</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Pancasila di Era Modern</h2>
+        <p>Mari kita hidupkan kembali nilai-nilai Pancasila dalam kehidupan sehari-hari untuk menjaga persatuan dan identitas bangsa Indonesia!</p>
+        <button onclick="location.href='#problem'">Pelajari Lebih Lanjut</button>
+    </section>
+
+    <!-- Permasalahan -->
+    <section id="problem" class="problem">
+        <h2>Permasalahan Kesadaran Pancasila</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Berikut adalah beberapa tantangan utama dalam penerapan nilai-nilai Pancasila di era modern:</p>
+        
+        <div class="card-container">
+            <div class="card">
+                <h3>Hafalan Tanpa Pemahaman</h3>
+                <p>Banyak masyarakat, terutama generasi muda, hanya menghafal Pancasila sebagai kewajiban sekolah tanpa memahami makna mendalam di balik setiap sila.</p>
+            </div>
+            <div class="card">
+                <h3>Pengaruh Globalisasi</h3>
+                <p>Derasnya arus informasi dan budaya asing yang tidak disaring mengikis nilai-nilai kebangsaan dan kearifan lokal.</p>
+            </div>
+            <div class="card">
+                <h3>Individualisme Meningkat</h3>
+                <p>Semangat gotong royong dan kebersamaan mulai luntur di era digital yang cenderung individualistik.</p>
+            </div>
+            <div class="card">
+                <h3>Politik Identitas</h3>
+                <p>Pancasila sering dijadikan alat politik daripada dihayati sebagai panduan hidup berbangsa.</p>
+            </div>
+            <div class="card">
+                <h3>Minim Implementasi</h3>
+                <p>Nilai Pancasila belum sepenuhnya tercermin dalam kebijakan publik dan praktik sehari-hari.</p>
+            </div>
+            <div class="card">
+                <h3>Generasi Digital</h3>
+                <p>Kurangnya konten kreatif tentang Pancasila yang menarik bagi generasi Z dan Alpha.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solusi -->
+    <section id="solution" class="solution">
+        <h2>Bagaimana Memperbaikinya?</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Berikut beberapa langkah konkret yang bisa kita lakukan bersama:</p>
+        
+        <div class="solution-list">
+            <div class="solution-item">
+                <h3>💡 Pendidikan Kontekstual</h3>
+                <p>Mengajarkan Pancasila melalui contoh nyata dalam kehidupan sehari-hari, bukan sekadar teori di kelas. Integrasikan dalam semua mata pelajaran.</p>
+            </div>
+            <div class="solution-item">
+                <h3>📱 Literasi Digital</h3>
+                <p>Manfaatkan media sosial untuk kampanye nilai Pancasila dengan konten kreatif (video pendek, meme edukatif, podcast).</p>
+            </div>
+            <div class="solution-item">
+                <h3>🌍 Wawasan Nusantara</h3>
+                <p>Tingkatkan pemahaman keberagaman Indonesia melalui pertukaran budaya, kuliner, dan tradisi antardaerah.</p>
+            </div>
+            <div class="solution-item">
+                <h3>👨‍👩‍👧‍👦 Keteladanan Keluarga</h3>
+                <p>Orang tua perlu memberi contoh penerapan nilai Pancasila dalam kehidupan sehari-hari di rumah.</p>
+            </div>
+            <div class="solution-item">
+                <h3>🏛️ Reformasi Kebijakan</h3>
+                <p>Pemerintah perlu menjadikan Pancasila sebagai dasar pengambilan keputusan di semua level kebijakan.</p>
+            </div>
+            <div class="solution-item">
+                <h3>🤝 Gerakan Sosial</h3>
+                <p>Mendorong komunitas lokal untuk membuat program berbasis Pancasila seperti kerja bakti, donor darah, atau bantuan sosial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kuis Interaktif -->
+    <section id="quiz" class="quiz">
+        <h2>Kuis: Seberapa Pancasilais Kamu?</h2>
+        <div id="quiz-container">
+            <p>Uji pemahamanmu tentang Pancasila dengan kuis interaktif ini!</p>
+            <button onclick="startQuiz()" style="background-color: #e60000; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 1rem;">Mulai Kuis</button>
+            <div id="quiz-questions" style="display: none; text-align: left; margin-top: 2rem;"></div>
+        </div>
+    </section>
+
+    <!-- Forum Diskusi -->
+    <div class="comment-box">
+    <input type="text" id="name-input" placeholder="Nama Anda" style="width: 100%; padding: 10px; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px;">
+    <textarea id="comment-input" placeholder="Contoh: Saya menerapkan sila ke-2 dengan selalu membantu tetangga yang kesulitan tanpa memandang suku atau agamanya..."></textarea>
+    <button onclick="postComment()">Kirim Komentar</button>
+</div>
+
+        
+        <div class="comments" id="comments-section">
+            <div class="comment">
+                <p><strong>Budi Santoso:</strong> Di lingkungan saya, kami mengadakan kerja bakti setiap minggu untuk membersihkan selokan. Ini bentuk penerapan sila ke-3 tentang persatuan Indonesia.</p>
+            </div>
+            <div class="comment">
+                <p><strong>Ani Wijaya:</strong> Sebagai guru, saya selalu mengajak siswa untuk menghormati teman yang sedang beribadah sesuai agamanya masing-masing. Ini implementasi sila pertama.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Pancasila Kini | Dibuat dengan ❤️ untuk Indonesia</p>
+        <p>Website ini merupakan sarana edukasi untuk meningkatkan kesadaran akan nilai-nilai Pancasila</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk Kuis Interaktif
+        const quizQuestions = [
+            {
+                question: "Apa makna sila 'Kemanusiaan yang Adil dan Beradab' dalam kehidupan sehari-hari?",
+                options: [
+                    "Menghargai hak asasi manusia",
+                    "Membantu orang lain tanpa diskriminasi",
+                    "Semua jawaban benar"
+                ],
+                answer: 2
+            },
+            {
+                question: "Bagaimana cara menerapkan sila 'Persatuan Indonesia' di era digital?",
+                options: [
+                    "Menyebarkan hoax tentang suku lain",
+                    "Menghargai perbedaan pendapat di media sosial",
+                    "Hanya berteman dengan yang seagama"
+                ],
+                answer: 1
+            },
+            {
+                question: "Contoh penerapan sila 'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan' adalah:",
+                options: [
+                    "Memaksakan pendapat pribadi",
+                    "Musyawarah untuk mufakat dalam mengambil keputusan",
+                    "Hanya mengikuti pendapat mayoritas"
+                ],
+                answer: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function startQuiz() {
+            document.querySelector('#quiz-container p').style.display = 'none';
+            document.querySelector('#quiz-container button').style.display = 'none';
+            document.getElementById('quiz-questions').style.display = 'block';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const quizElement = document.getElementById('quiz-questions');
+            if (currentQuestion >= quizQuestions.length) {
+                quizElement.innerHTML = `
+                    <h3>Kuis Selesai!</h3>
+                    <p>Skor Anda: ${score} dari ${quizQuestions.length}</p>
+                    <p>${score === quizQuestions.length ? 'Luar biasa! Anda benar-benar memahami Pancasila!' : 
+                    score > quizQuestions.length/2 ? 'Bagus! Masih ada yang bisa dipelajari lagi' : 
+                    'Yuk belajar lebih giat tentang Pancasila!'}</p>
+                    <button onclick="location.reload()">Coba Lagi</button>
+                `;
+                return;
+            }
+
+            const question = quizQuestions[currentQuestion];
+            let optionsHtml = '';
+            question.options.forEach((option, index) => {
+                optionsHtml += `
+                    <div>
+                        <input type="radio" name="quiz" id="option${index}" value="${index}">
+                        <label for="option${index}">${option}</label>
+                    </div>
+                `;
+            });
+
+            quizElement.innerHTML = `
+                <h3>Pertanyaan ${currentQuestion + 1}/${quizQuestions.length}</h3>
+                <p>${question.question}</p>
+                ${optionsHtml}
+                <button onclick="checkAnswer()" style="margin-top: 1rem;">Submit Jawaban</button>
+            `;
+        }
+
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="quiz"]:checked');
+            if (!selectedOption) {
+                alert('Pilih jawaban terlebih dahulu!');
+                return;
+            }
+
+            const answer = parseInt(selectedOption.value);
+            if (answer === quizQuestions[currentQuestion].answer) {
+                score++;
+            }
+
+            currentQuestion++;
+            showQuestion();
+        }
+
+        // Fungsi untuk Forum Diskusi
+        function postComment() {
+    const nameInput = document.getElementById('name-input');
+    const commentInput = document.getElementById('comment-input');
+    const name = nameInput.value.trim();
+    const commentText = commentInput.value.trim();
+
+    if (!name || !commentText) {
+        alert('Nama dan komentar tidak boleh kosong!');
+        return;
+    }
+
+    const commentSection = document.getElementById('comments-section');
+    const newComment = document.createElement('div');
+    newComment.className = 'comment';
+    newComment.innerHTML = `<p><strong>${name}:</strong> ${commentText}</p>`;
+
+    commentSection.insertBefore(newComment, commentSection.firstChild);
+    nameInput.value = '';
+    commentInput.value = '';
+
+    alert('Terima kasih atas kontribusinya! Komentar Anda telah ditambahkan.');
+}
+
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
